@@ -7,7 +7,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
 
 @Embeddable
-public class RecipesProducts implements Serializable{
+public class RecipesProductsPK implements Serializable{
 	
 	@Column(name = "recipe_id")
 	private Long recipeId;
