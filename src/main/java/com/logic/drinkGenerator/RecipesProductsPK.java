@@ -14,10 +14,4 @@ public class RecipesProductsPK implements Serializable{
 	
 	@Column(name = "product_id")
 	private Long productId;
-	
-	@Column(name = "product_quantity")
-	private int productQuantity;
-	
-	@Column(name = "unit_measure")
-	private String unitMeasure;
 }

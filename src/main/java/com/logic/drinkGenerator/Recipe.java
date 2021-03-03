@@ -29,15 +29,15 @@ public class Recipe {
 	private String taste;
 	
 	@OneToMany(mappedBy = "recipe")
-	private List<RecipesProducts> recipeProduct;
+	private List<RecipesProducts> productAssoc; //association with product
 
 	public Recipe(Long productId, String description, String author, String taste,
-			List<RecipesProducts> recipeProduct) {
+			List<RecipesProducts> productAssoc) {
 		super();
 		this.productId = productId;
 		this.description = description;
 		this.author = author;
 		this.taste = taste;
-		this.recipeProduct = recipeProduct;
+		this.productAssoc = productAssoc;
 	}
 }

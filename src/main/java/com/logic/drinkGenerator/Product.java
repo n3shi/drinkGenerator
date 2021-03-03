@@ -23,10 +23,18 @@ public class Product {
 	private Long productId;
 		
 	private String name;
-	
+
 	private String desription;
 	
 	@OneToMany(mappedBy = "product")
-	private List<RecipesProducts> recipeAssoc; //association with products
+	private List<RecipesProducts> recipeAssoc; //association with recipe
+	
+	public Product(Long productId, String name, String desription, List<RecipesProducts> recipeAssoc) {
+		super();
+		this.productId = productId;
+		this.name = name;
+		this.desription = desription;
+		this.recipeAssoc = recipeAssoc;
+	}
 
 }
