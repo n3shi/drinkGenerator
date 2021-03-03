@@ -22,22 +22,11 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long productId;
 		
-	private String description;
+	private String name;
 	
-	private String author;
+	private String desription;
 	
-	private String taste;
-	
-	@OneToMany(mappedBy = "recipe")
-	private List<RecipesProducts> recipeProduct;
+	@OneToMany(mappedBy = "product")
+	private List<RecipesProducts> recipeAssoc; //association with products
 
-	public Product(Long productId, String description, String author, String taste,
-			List<RecipesProducts> recipeProduct) {
-		super();
-		this.productId = productId;
-		this.description = description;
-		this.author = author;
-		this.taste = taste;
-		this.recipeProduct = recipeProduct;
-	}
 }
