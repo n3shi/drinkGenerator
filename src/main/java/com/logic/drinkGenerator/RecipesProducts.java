@@ -1,10 +1,13 @@
 package com.logic.drinkGenerator;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.EmbeddedId;
 
 @Embeddable
-public class RecipesProducts {
+public class RecipesProducts implements Serializable{
 	
 	@Column(name = "recipe_id")
 	private Long recipeId;
